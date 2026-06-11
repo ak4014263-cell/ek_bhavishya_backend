@@ -1,0 +1,8 @@
+{
+  "require": ["@babel/register"],
+  "extensions": ["js"],
+  "spec": ["tests/**/*.test.js"],
+  "timeout": 10000,
+  "exit": true,
+  "recursive": true
+}
