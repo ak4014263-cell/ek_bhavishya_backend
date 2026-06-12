@@ -19,7 +19,8 @@ import Admin from '../modules/admin/models/admin.model.js';
 
 
 const generateToken = (id) => {
-    return jwt.sign({ id, role: 'user' }, process.env.JWT_SECRET, {
+    const secret = process.env.JWT_SECRET || 'secret';
+    return jwt.sign({ id, role: 'user' }, secret, {
         expiresIn: '30d',
     });
 };
